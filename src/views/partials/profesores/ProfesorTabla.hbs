@@ -1,0 +1,58 @@
+{{#if profesores}}
+<table class="table table-bordered table-hover table-dark">
+    <FONT FACE="arial">
+    <FONT COLOR="cyan">
+    <h1>LISTA DE PROFESORES REGISTRADOS</h1> 
+
+    <thead>
+        <tr class="text-center">
+            <th>NUM.</th>
+            <th>RFC</th>
+            <th>NOMBRES</th>
+            <th>PATERNO</th>
+            <th>MATERNO</th>
+            <th>FECHA DE NACIMIENTO</th>
+            <th>DIRECCION</th>
+            <th>CELULAR</th>
+            <th>PROFESION</th>
+            <th>NUMERO DE EMPLEADO</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each profesores}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{RFC}}</td>
+            <td>{{nombres}}</td>
+            <td>{{paterno}}</td>
+            <TD>{{materno}}</TD>
+            <td>{{fechaNacimiento}}</td>
+            <td>{{direccion}}</td>
+            <td>{{celular}}</td>
+            <td>{{profesion}}</td>
+            <td>{{numeroEmpleado}}</td>
+            <td>
+                {{#if opcion}}
+                <a href="/statusprofesores/{{_id}}" class="btn btn-warning">No Existente</a>
+                {{else}}
+                <a href="/statusprofesores/{{_id}}" class="btn btn-success">Existente</a>
+                {{/if}}
+                <a href="/updateprofesor/{{_id}}" class="btn btn-info">Actualizar</a>
+                <a href="/deleteProfesores/{{_id}}" class="btn btn-danger">Eliminar</a>
+            </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+    <FONT FACE="arial">
+    <FONT COLOR="green">
+    <h1>Sin profesores</h1>
+   <!-- <img src="/icons/logo.png" class="w-75"> -->
+</div>
+</div>
+{{/if}}

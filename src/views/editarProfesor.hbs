@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                 <style>
+    body{
+
+    }
+</style>
+ 
+<FONT FACE="arial">
+    <center>
+    <h1>MODIFICAR DATOS DE PROFESORES</h1>       
+    </center>
+
+
+<form action="/updateprofesor/{{profesores._id}}" method="POST">
+<div>
+    <FONT COLOR="lime">
+    <label for="RFC">RFC</label>
+    <input type="text" name="RFC" placeholder="Modifica el RFC" class="form-control bg-dark text-white"
+    value="{{profesores.RFC}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="nombres">Nombres</label>
+    <input type="text" name="nombres" placeholder="Nombre(s)" class="form-control bg-dark text-white"
+    value="{{profesores.nombres}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="paterno">Paterno</label>
+    <input type="text" name="paterno" placeholder="A. Paterno" class="form-control bg-dark text-white"
+    value="{{profesores.paterno}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="materno">Materno</label>
+    <input type="text" name="materno" placeholder="A. Naterno" class="form-control bg-dark text-white"
+    value="{{profesores.materno}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+    <input type="date" name="fechaNacimiento" placeholder="dd/mm/aa" class="form-control bg-dark text-white"
+    value="{{profesores.fechaNacimiento}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="direccion">direccion</label>
+    <input type="text" name="direccion" placeholder="direccion del profesor" class="form-control bg-dark text-white"
+    value="{{profesores.direccion}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="ceular">Celular</label>
+    <input type="text" name="celular" placeholder="Numero Celular" class="form-control bg-dark text-white"
+    value="{{profesores.celular}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="profesion">Profesion</label>
+    <input type="text" name="profesion" placeholder="Profesion(es)" class="form-control bg-dark text-white"
+    value="{{profesores.profesion}}">
+    </FONT>
+</div>
+
+<div>
+    <FONT COLOR="lime">
+    <label for="numeroEmpleado">Numero de Empleado</label>
+    <input type="text" name="numeroEmpleado" placeholder="Numero de Empleado" class="form-control bg-dark text-white"
+    value="{{profesores.numeroEmpleado}}">
+    </FONT>
+</div>
+
+<center>
+<button class="btn btn-info">Actualizar</button>
+</center>
+
+</form>

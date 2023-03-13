@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                 <style>
+    body {
+        
+        
+    }
+</style>
+ 
+<FONT FACE="arial" >
+    <center>
+    <h1>MODIFICAR LOS DATOS DE ALUMNOS</h1>       
+    </center>
+
+<form action="/updateAlumno/{{alumnos._id}}" method="POST">
+    <div>
+        <FONT COLOR="lime">
+        <label for="nombres">Modifica Nombres:</label>
+        <input type="text" name="nombres" placeholder="Nombres" class="form-control bg-dark text-white"
+        value="{{alumnos.nombres}}">
+        </FONT>
+    </div>
+
+     <div>
+        <FONT COLOR="lime">
+        <label for="aPaterno">Modifica A.Paterno:</label>
+        <input type="text" name="aPaterno" placeholder="Apellido Paterno" class="form-control bg-dark text-white"
+        value="{{alumnos.aPaterno}}">
+        </FONT>
+    </div>
+
+     <div>
+        <FONT COLOR="lime">
+        <label for="aMaterno">Modifica A.Materno:</label>
+        <input type="text" name="aMaterno" placeholder="Apellido Materno" class="form-control bg-dark text-white"
+        value="{{alumnos.aMaterno}}">
+        </FONT>
+    </div>
+    
+     <div>
+        <FONT COLOR="lime">
+        <label for="fechaNac">Modifica Fecha Nacimiento:</label>
+        <input type="date" name="fechaNac" placeholder="Fecha Nacimiento" class="form-control bg-dark text-white"
+        value="{{alumnos.fechaNac}}">
+        </FONT>
+    </div>
+
+     <div>
+        <FONT COLOR="lime">
+        <label for="sexo">Modifica Sexo:</label>
+        <select name="sexo" id="sexo" class="form-control bg-dark text-white"
+        value="{{alumnos.sexo}}">
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option> 
+        </select>
+        </FONT>
+    </div>
+
+      <div>
+        <FONT COLOR="lime">
+        <label for="celular">Modifica Celular:</label>
+        <input type="text" name="celular" placeholder="Celular" class="form-control bg-dark text-white"
+        value="{{alumnos.celular}}">
+        </FONT>
+    </div>
+
+      <div>
+         <FONT COLOR="lime">
+    <label for="direccion">Direccion</label>
+    <input type="text" name="direccion" placeholder="direccion del alumno" class="form-control bg-dark text-white"
+    value="{{alumnos.direccion}}">
+    </FONT>
+    </div>   
+
+<center>
+    <button class="btn btn-info">Actualizar</button>
+</center>
+</form>

@@ -1,0 +1,54 @@
+{{#if alumnos}}
+<table class="table table-bordered table-hover table-dark">
+    <FONT FACE="arial">
+    <FONT COLOR="cyan">
+    <h1>LISTA DE ALUMNOS REGISTRADOS</h1>  
+
+    <thead>
+        <tr class="text-center">
+            <th>id</th>
+            <th>NOMBRES</th>
+            <th>APELLIDO PATERNO</th>
+            <th>APELLIDO MATERNO</th>
+            <th>FECHA DE NACIMIENTO</th>
+            <th>SEXO</th>
+            <th>NUMERO CELULAR</th>
+            <th>DIRECCION</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each alumnos}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{nombres}}</td>
+                <td>{{aPaterno}}</td>
+                <td>{{aMaterno}}</td>
+                <td>{{fechaNac}}</td>
+                <td>{{sexo}}</td>
+                <td>{{celular}}</td>
+                <td>{{direccion}}</td>
+                <td>
+                {{#if opcion}}
+                    <a href="/statusAlumnos/{{_id}}" class="btn btn-warning">No Existente</a>
+                {{else}}
+                    <a href="/statusAlumnos/{{_id}}" class="btn btn-success">Existente</a>
+                {{/if}}
+                <a href="/updateAlumno/{{_id}}" class="btn btn-info">Actualizar</a>
+                <a href="/deleteAlumno/{{_id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+    <FONT FACE="arial">
+    <FONT color= "green">
+    <h1>Sin alumnos</h1>
+ <!-- <img src="/icons/logo.png" class="w-75"> -->
+</div>
+</div>
+{{/if}}

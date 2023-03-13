@@ -1,0 +1,46 @@
+{{#if asignaturas}}
+<table class="table table-bordered table-hover table-dark">
+    <FONT FACE="arial">
+    <FONT COLOR="cyan">
+    <h1>LISTA DE ASIGNATURAS REGISTRADAS</h1>       
+
+    <thead>
+        <tr class="text-center">
+            <th>id</th>
+            <th>NOMBRE</th>
+            <th>CREDITOS</th>
+            <th>HORAS</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each asignaturas}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{nombre}}</td>
+                <td>{{creditos}}</td>
+                <td>{{horas}}</td>
+                <td>
+                    {{#if opcion }}
+                        <a href="/StatusAsignaturas/{{_id}}" class="btn btn-warning">No Disponible</a>
+                    {{else}}
+                        <a href="/StatusAsignaturas/{{_id}}" class="btn btn-success">Disponible</a>
+                    {{/if}}
+                    <a href="/updateAsignaturas/{{_id}}" class="btn btn-info">Actualizar</a>
+                    <a href="/deleteAsignaturas/{{_id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+    <FONT FACE="arial">
+    <FONT COLOR="green">
+    <h1>Sin asignaturas</h1>
+<!-- <img src="/icons/logo.png" class="w-75"> -->
+</div>
+</div>
+{{/if}}
