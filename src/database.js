@@ -1,11 +1,11 @@
 import { connect } from "mongoose";
-
+import {MONGODB_URI} from "./config";
 
 (async () => {
     try {
-      const db = await connect("mongodb://127.0.0.1:27017/escuela");
-      console.log("Database connected to", db.connection.name);
+        const db = await connect(MONGODB_URI);
+        console.log("Database connected to", db.connection.name);
     } catch (error) {
-        console.error(error);
+        console.error(error); 
     }
 })();
